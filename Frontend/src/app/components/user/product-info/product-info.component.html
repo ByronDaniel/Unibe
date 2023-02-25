@@ -1,0 +1,28 @@
+<div *ngIf="productSelected != null; else cargando">
+  <img
+    class="product-img"
+    src="{{ productSelected.imageUrl }}"
+    style="width: 400px"
+    onerror="src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDKQDSy8e-KJIHnylQr4ZnTNQtAA-xs986A&usqp=CAU'"
+  />
+  <div class="product-details">
+    <h5>Descripcion:</h5>
+    <p>{{ productSelected.description }}</p>
+    <h5 class="span-product">Precio: $ {{ productSelected.price }}</h5>
+  </div>
+  <div class="add-cart" *ngIf="productSelected.stock > 0">
+    <select class="input-quantity" name="quantity" #quantity>
+      <option *ngFor="let i of stock" value="{{ i }}">{{ i }}</option>
+    </select>
+    <button
+      class="btn-add-cart"
+      (click)="addProductCart(productSelected.id!, quantity.value)"
+    >
+      <i class="fa-solid fa-cart-plus"></i> Agregar a mi carrito
+    </button>
+  </div>
+</div>
+
+<ng-template #cargando>
+  <span class="no-products">obteniendo producto</span>
+</ng-template>

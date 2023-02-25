@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <a routerLink="/ecommerce/products">
+    <img
+      class="navbar-logo"
+      src="https://unibe.edu.ec/wp-content/uploads/2022/08/logoo.png"
+      alt="logo-ecommerce"
+    
+      />
+    
+  </a>
+
+  <ul class="navbar-items">
+    <li class="navbar-item">
+      <a class="navbar-link" routerLink="/ecommerce/my-cart">
+        <i class="fa-solid fa-cart-shopping" ></i>
+        <span *ngIf="ecommerceService.quantity == 0"> Mi Carrito</span>
+        <span *ngIf="ecommerceService.quantity > 0"> Mi Carrito - {{ecommerceService.quantity}} Productos </span>
+      </a>
+    </li>
+    <li class="navbar-item">
+      <a class="navbar-link" (click)="logOut()">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i> Salir
+      </a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,30 @@
+<h3 class="title">CATEGORIAS</h3>
+
+<table class="table-productTypes">
+  <thead class="thead">
+    <td>CATEGORIAS</td>
+    <td>
+      <a class="button-table" routerLink="/admin/product-types/create"
+        >Nuevo <i class="fa-solid fa-plus"></i
+      ></a>
+    </td>
+  </thead>
+  <tbody *ngIf="productTypes.length > 0">
+    <tr *ngFor="let productType of productTypes">
+      <td>{{ productType.name }}</td>
+      <td class="buttons-flex">
+        <a
+          class="button-table"
+          [routerLink]="['/admin/product-types/edit/', productType.id]"
+          >Editar <i class="fa-solid fa-pen"></i
+        ></a>
+        <button
+          class="button-table"
+          (click)="deleteProductType(productType.id!)"
+        >
+          Eliminar <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

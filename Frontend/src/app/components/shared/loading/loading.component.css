@@ -1,0 +1,20 @@
+.content-loading {
+  width: 100vw;
+  height: 100vh;
+}
+
+.loading-text {
+  width: max-content;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-title {
+  color: white;
+  width: max-content;
+  margin: 0;
+  font-weight: 200;
+  font-size: 3rem;
+}

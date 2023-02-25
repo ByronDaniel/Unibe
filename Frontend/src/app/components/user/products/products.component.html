@@ -1,0 +1,78 @@
+<div class="products-flex content">
+  <app-product-types
+    class="product-types"
+    (productsOut)="productsOut($event)"
+    (productTypeSelectedOut)="productTypeSelectedOut($event)"
+  ></app-product-types>
+  <div class="product-list">
+    <h1
+      class="product-page-title"
+      *ngIf="products.length > 0; else titleNotProducts"
+    >
+      {{ productTypeSelected }}
+    </h1>
+    <ng-template #titleNotProducts>
+      <h1 class="product-page-title">PRODUCTOS NO DISPONIBLES</h1>
+    </ng-template>
+    <hr />
+    <div
+      class="product-cards"
+      *ngIf="products.length > 0; else notExistProducts"
+    >
+      <a
+        class="product-card"
+        *ngFor="let product of products"
+        (click)="openModal(template, product)"
+      >
+        <img
+          class="product-img"
+          src="{{ product.imageUrl }}"
+          onerror="src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDKQDSy8e-KJIHnylQr4ZnTNQtAA-xs986A&usqp=CAU'"
+        />
+        <div class="product-body">
+          <h4 class="product-title">
+            {{ product.name }}
+            <br>
+            <h6>{{ product.brand }}</h6> 
+          </h4>
+          <span class="product-btn">PRECIO: ${{ product.price }}</span>
+          <p class="product-description">{{ product.description }}</p>
+        </div>
+        <span
+          [class.available]="product.stock > 0"
+          [class.unavailable]="product.stock == 0"
+          >{{ product.stock > 0 ? "Disponible" : "Agotado" }}</span
+        >
+      </a>
+    </div>
+    <ng-template #notExistProducts>
+      <div class="loading-div">
+        <p>No hay productos en esta categoria</p>
+      </div>
+    </ng-template>
+  </div>
+</div>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{ productSelected.name }}</h4>
+    <button
+      type="button"
+      class="btn-close close pull-right"
+      aria-label="Close"
+      (click)="modalRef?.hide()"
+    >
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span
+      [class.available]="productSelected.stock > 0"
+      [class.unavailable]="productSelected.stock == 0"
+      >{{ productSelected.stock > 0 ? "Disponible" : "Agotado" }}</span
+    >
+    <app-product-info
+      [productSelected]="productSelected"
+      (closeModal)="closeModal()"
+    ></app-product-info>
+  </div>
+</ng-template>

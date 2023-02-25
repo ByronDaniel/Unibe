@@ -1,0 +1,914 @@
+{
+	"info": {
+		"_postman_id": "227e3110-ca06-4678-9f72-2b89be3af9cc",
+		"name": "EcommerceBD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9722805"
+	},
+	"item": [
+		{
+			"name": "Brands",
+			"item": [
+				{
+					"name": "Get All Brands",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Brand?limit=3&offset=0&sort=Name&order=asc&search=l",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Brand"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "Name"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "search",
+									"value": "l"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Brand By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Brand/6b522e16-8984-4940-4ab5-08da6862bad6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Brand",
+								"6b522e16-8984-4940-4ab5-08da6862bad6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Brand",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"SAMSUNG\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Brand",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Brand",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"d36c5799-363b-4a63-4ab7-08da6862bad6\",\r\n    \"name\": \"XIAOMI\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Brand",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Brand"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Brand",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Brand/d36c5799-363b-4a63-4ab7-08da6862bad6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Brand",
+								"d36c5799-363b-4a63-4ab7-08da6862bad6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ProductTypes",
+			"item": [
+				{
+					"name": "Get All ProductTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/ProductType?limit=3&offset=0&sort=Name&order=asc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"ProductType"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "Name"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ProductType By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/ProductType/c3dd67af-24bc-4936-aa76-08da686569d1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"ProductType",
+								"c3dd67af-24bc-4936-aa76-08da686569d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post ProductType",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"TELEFONOS\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/ProductType",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"ProductType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put ProductType",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"8dd67bde-5bd8-4074-116f-08da686ab4d9\",\r\n        \"name\": \"TECNOLOGIA\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/ProductType",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"ProductType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ProductType",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/ProductType/c3dd67af-24bc-4936-aa76-08da686569d1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"ProductType",
+								"c3dd67af-24bc-4936-aa76-08da686569d1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get All Products",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Product?limit=3&offset=0&sort=Name&order=asc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "Name"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								},
+								{
+									"key": "search",
+									"value": "ovo",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product By Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:7092/api/Product/1fe0b2f4-b8f0-405d-c701-08da68666853",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Product",
+								"1fe0b2f4-b8f0-405d-c701-08da68666853"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"MONITOR\",\r\n  \"description\": \"FULL HD\",\r\n  \"price\": 200,\r\n  \"stock\": 20,\r\n  \"productTypeId\": \"8dd67bde-5bd8-4074-116f-08da686ab4d9\",\r\n  \"brandId\": \"305d4522-78aa-4198-b8d4-08da686aa728\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put Product",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"4d58ef39-5a08-429b-1049-08da68e2844f\",\r\n        \"name\": \"TELEVISOR\",\r\n        \"description\": \"MODELO 2021\",\r\n        \"price\": 600.00,\r\n        \"stock\": 0,\r\n        \"productTypeId\": \"8dd67bde-5bd8-4074-116f-08da686ab4d9\",\r\n        \"brandId\": \"305d4522-78aa-4198-b8d4-08da686aa728\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Product/32a30b9b-61b1-4023-9796-08da68676b2d",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Product",
+								"32a30b9b-61b1-4023-9796-08da68676b2d"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Delivery Methods",
+			"item": [
+				{
+					"name": "Get All DeliveryMethods",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/DeliveryMethod?limit=3&offset=0&sort=Name&order=asc",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"DeliveryMethod"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "offset",
+									"value": "0"
+								},
+								{
+									"key": "sort",
+									"value": "Name"
+								},
+								{
+									"key": "order",
+									"value": "asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get DeliveryMethod by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7049/api/DeliveryMethod/147a8f6d-40d8-4667-befc-08da6394c979",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"DeliveryMethod",
+								"147a8f6d-40d8-4667-befc-08da6394c979"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post DeliveryMethod",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Entrega a domicilio en bicicleta\",\r\n  \"description\":\"Suele tardar mas\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/DeliveryMethod",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"DeliveryMethod"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Put DeliveryMethod",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"147a8f6d-40d8-4667-befc-08da6394c979\",\r\n    \"name\": \"Entrega personalizada\",\r\n    \"description\":\"Comunicarse con un acesor\"\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7049/api/DeliveryMethod",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"DeliveryMethod"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete DeliveryMethod",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7049/api/DeliveryMethod/147a8f6d-40d8-4667-befc-08da6394c979",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7049",
+							"path": [
+								"api",
+								"DeliveryMethod",
+								"147a8f6d-40d8-4667-befc-08da6394c979"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders",
+			"item": [
+				{
+					"name": "GetAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Order?order=desc&sort=state&limit=20&offset=2&search=f91f2159-67eb-4356-f784-08da69336265",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order"
+							],
+							"query": [
+								{
+									"key": "order",
+									"value": "desc"
+								},
+								{
+									"key": "sort",
+									"value": "state"
+								},
+								{
+									"key": "limit",
+									"value": "20"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								},
+								{
+									"key": "search",
+									"value": "f91f2159-67eb-4356-f784-08da69336265"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderAddProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"f267c1de-f8da-43ea-5851-08da686abc25\",\r\n    \"productQuantity\": 2323\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Order/62d1efdd-e536-426a-e748-08da686b09f4/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"62d1efdd-e536-426a-e748-08da686b09f4",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderUpdateProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"productId\": \"f267c1de-f8da-43ea-5851-08da686abc25\",\r\n  \"productQuantity\": 11\r\n}"
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Order/62d1efdd-e536-426a-e748-08da686b09f4/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"62d1efdd-e536-426a-e748-08da686b09f4",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderRemoveProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Order/1fe0b2f4-b8f0-405d-c701-08da68666853/Product/1fe0b2f4-b8f0-405d-c701-08da68666853",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"1fe0b2f4-b8f0-405d-c701-08da68666853",
+								"Product",
+								"1fe0b2f4-b8f0-405d-c701-08da68666853"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetOrderById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Order/Show/62d1efdd-e536-426a-e748-08da686b09f4",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"Show",
+								"62d1efdd-e536-426a-e748-08da686b09f4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderPay",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://localhost:7092/api/Order/Pay/fb18928a-7153-414c-fe96-08da6928ef52/DeliveryMethod/4018e2ba-e70c-45f7-cea5-08da69d9bb2e",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"Pay",
+								"fb18928a-7153-414c-fe96-08da6928ef52",
+								"DeliveryMethod",
+								"4018e2ba-e70c-45f7-cea5-08da69d9bb2e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OrderCancel",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7092/api/Order/Cancel/821c4fff-7d63-47bd-1fed-08da692e5c6b",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7092",
+							"path": [
+								"api",
+								"Order",
+								"Cancel",
+								"821c4fff-7d63-47bd-1fed-08da692e5c6b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"userName\": \"Byron\",\r\n  \"password\": \"123\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:7092/api/Token",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7092",
+					"path": [
+						"api",
+						"Token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJCeXJvbiIsImp0aSI6IjkwY2NkNGViLTU1ZTAtNDEyMS1iN2NmLTNlZjljMzU0MDM1ZCIsImlhdCI6IjIwLzcvMjAyMiAwOjM0OjU1IiwiVXNlck5hbWUiOiJCeXJvbiIsImV4cCI6MTY1ODI3Nzg5NSwiaXNzIjoiQ3Vyc28tTmV0LUJhc2ljbyIsImF1ZCI6IkFwaS1DdXJzbyJ9.05rFNKlIpsK89eSMuLWj0rJiZbv0_8ObHpbRss3NLPc",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "TokenEcommerce",
+			"value": "ads"
+		}
+	]
+}

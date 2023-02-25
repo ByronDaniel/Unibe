@@ -1,0 +1,41 @@
+<h3 class="title">PRODUCTOS</h3>
+
+<table class="table-products">
+  <thead class="thead">
+    <td>IMAGEN</td>
+    <td>MARCA</td>
+    <td>NOMBRE</td>
+    <td>PRECIO</td>
+    <td>STOCK</td>
+    <td>
+      <a class="button-table" routerLink="/admin/products/create"
+        >Nuevo <i class="fa-solid fa-plus"></i
+      ></a>
+    </td>
+  </thead>
+  <tbody *ngIf="products.length > 0">
+    <tr *ngFor="let product of products">
+      <td>
+        <img
+          src="{{ product.imageUrl }}"
+          class="img-product"
+          onerror="src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDKQDSy8e-KJIHnylQr4ZnTNQtAA-xs986A&usqp=CAU'"
+        />
+      </td>
+      <td>{{ product.brand }}</td>
+      <td>{{ product.name }}</td>
+      <td>${{ product.price }}</td>
+      <td>{{ product.stock }}</td>
+      <td class="buttons-flex">
+        <a
+          class="button-table"
+          [routerLink]="['/admin/products/edit/', product.id]"
+          >Editar <i class="fa-solid fa-pen"></i
+        ></a>
+        <button class="button-table" (click)="deleteProduct(product.id!)">
+          Eliminar <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

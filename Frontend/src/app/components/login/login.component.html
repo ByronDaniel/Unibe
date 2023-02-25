@@ -1,0 +1,73 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://unibe.edu.ec/wp-content/uploads/2022/08/logoo.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <h3 class="mb-3 text-center bg-yellow-unibe">Bienvenido a nuestro Ecommerce</h3>
+        <form [formGroup]="formGroupLogin" (ngSubmit)="onSubmit($event)" #loginForm="ngForm" class="bg-white p-5">
+          <div class="mb-3">
+            <label class="form-label" for="inputUsuario">Usuario</label>
+            <input class="form-control" type="text" formControlName="userName" placeholder="Ingresa el usuario"
+              id="inputUsuario" required/>
+            <span class="login-alert" id="alertUsuario" *ngIf="
+                      userNameField?.invalid &&
+                      (userNameField?.touched || loginForm.submitted)
+                    ">Requerido</span>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="inputContrasena">Contraseña</label>
+            <input class="form-control" type="password" formControlName="password" placeholder="Ingresa la contraseña"
+              autocomplete="current-password" id="inputContrasena" required/>
+            <span class="login-alert" id="alertContrasena" *ngIf="
+                      passwordField?.invalid &&
+                      (passwordField?.touched || loginForm.submitted)
+                    ">Requerido</span>
+            <span class="login-alert" id="alertContrasena">{{
+              passwordMessage
+              }}</span>
+          </div>
+        
+          <div class="mb-3">
+            <label class="form-label" for="inputRol">Rol</label>
+            <select class="form-select" name="inputRol" id="inputRol" formControlName="rol">
+              <option value="user">Usuario</option>
+              <option value="admin">Administrador</option>
+            </select>
+          </div>
+        
+          <button class="btn btn-primary bg-unibe" type="submit">
+            <i class="fa-solid fa-right-to-bracket"></i> Iniciar Sesión
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div
+    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-unibe">
+    <!-- Copyright -->
+    <div class="text-white mb-3 mb-md-0">
+      Unibe Proyecto Final - Aplicaciones distribuidas © 2023.
+    </div>
+    <!-- Copyright -->
+
+    <!-- Right -->
+    <div>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#!" class="text-white me-4">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="#!" class="text-white">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </div>
+</section>

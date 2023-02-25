@@ -1,0 +1,46 @@
+<nav class="navbar-menu">
+  <ul class="menu-items">
+    <li class="menu-item">
+      <a
+        class="menu-link"
+        routerLink="/admin/product-types"
+        [class.item-selected]="
+          this.currentRoute.includes('/admin/product-types')
+        "
+        >Categorias</a
+      >
+    </li>
+    <li class="menu-item">
+      <a
+        class="menu-link"
+        routerLink="/admin/brands"
+        [class.item-selected]="this.currentRoute.includes('/admin/brands')"
+        >Marcas</a
+      >
+    </li>
+    <li class="menu-item">
+      <a
+        class="menu-link"
+        routerLink="/admin/delivery-methods"
+        [class.item-selected]="
+          this.currentRoute.includes('/admin/delivery-methods')
+        "
+        >Metodos de entrega</a
+      >
+    </li>
+    <li class="menu-item">
+      <a
+        routerLink="/admin/products"
+        class="menu-link"
+        [class.item-selected]="this.currentRoute.includes('/admin/products')"
+        >Productos</a
+      >
+    </li>
+  </ul>
+
+  <li class="navbar-item">
+    <a class="navbar-link" (click)="logOut()">
+      <i class="fa-solid fa-arrow-right-from-bracket"></i> Salir
+    </a>
+  </li>
+</nav>

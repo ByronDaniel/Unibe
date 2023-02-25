@@ -1,0 +1,25 @@
+<h3 class="title">MARCAS</h3>
+
+<table class="table-brands">
+  <thead class="thead">
+    <td>MARCA</td>
+    <td>
+      <a class="button-table" routerLink="/admin/brands/create"
+        >Nuevo <i class="fa-solid fa-plus"></i
+      ></a>
+    </td>
+  </thead>
+  <tbody *ngIf="brands.length > 0">
+    <tr *ngFor="let brand of brands">
+      <td>{{ brand.name }}</td>
+      <td class="buttons-flex">
+        <a class="button-table" [routerLink]="['/admin/brands/edit/', brand.id]"
+          >Editar <i class="fa-solid fa-pen"></i
+        ></a>
+        <button class="button-table" (click)="deleteBrand(brand.id!)">
+          Eliminar <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
